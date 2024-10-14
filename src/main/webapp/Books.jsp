@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>도서 목록</title>
 </head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 <body>
@@ -37,6 +37,7 @@
 					<p><%= book.getPublisher() %> | <%= book.getUnitPrice() %>원</p>
 					<p><%= book.getDescription().substring(0, 60) %>...</p>
 					<p><%= book.getUnitPrice() %>원</p>
+					<p><a href="./book.jsp?id=<%=book.getBookId() %>" class="btn btn-secondary" role="button"> 상세 정보 &raquo;></a>
 				</div>
 			</div>
 			
