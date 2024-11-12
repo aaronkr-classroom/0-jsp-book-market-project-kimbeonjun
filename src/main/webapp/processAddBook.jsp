@@ -9,11 +9,11 @@
 	request.setCharacterEncoding("UTF-8");
 
 	String filename="";
-	String realFolder="C:\Users\kyh31\OneDrive\바탕 화면\자바해킹\0-jsp-book-market-project-kimbeonjun\src\main\webapp\images";
+	String realFolder="C:\\Users\\kyh31\\OneDrive\\바탕 화면\\자바해킹\\0-jsp-book-market-project-kimbeonjun\\src\\main\\webapp\\resources\\images";
 	int maxSize=5 * 1024 * 1024;
 	String encType="utf-8";
 	
-	multipartRequest multi=new MultipartRequest(request, realFolder, maxSize, encType, new DefaultFileRenamePoliy());
+	MultipartRequest multi = new MultipartRequest(request, realFolder, maxSize, encType, new DefaultFileRenamePolicy());
 	
 	String bookId=multi.getParameter("bookId");
 	String name=multi.getParameter("name");
@@ -35,7 +35,7 @@
 	if (unitPrice.isEmpty())
 		price=0;
 	else
-		price=Integer.valueOf(unitPrice);
+		price=Integer.valueOf(price);
 	
 	long stock;
 	
